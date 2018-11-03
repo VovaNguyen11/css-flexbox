@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper{
+    font-family: Arial, sans-serif;
+    color: rgb(83, 59, 59);
+    font-size: 1.25rem;
+}
+
+.wrapper * {
+    padding: 1rem;
+}
+
+.header{
+    background: linear-gradient(to top right, #33ccff 0%, #ccffcc 100%);
+}
+
+.main {
+    background: linear-gradient(to top right, #3399ff 0%, #ccffff 100%);
+}
+
+.aside-1 {
+    background: linear-gradient(to top right, #0099ff 0%, #66ffff 100%);
+}
+
+.aside-2 {
+    background: linear-gradient(to top right, #0066cc 0%, #00ffcc 100%);
+}
+
+.footer {
+    background: linear-gradient(to top right, #ff6699 0%, #99ff99 100%);
+}
+
+.main p{
+    margin: 0;
+    padding: 0
+}
