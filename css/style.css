@@ -2,56 +2,277 @@
     box-sizing: border-box;
 }
 
-.wrapper{
-    font-family: Arial, sans-serif;
-    color: rgb(83, 59, 59);
+.list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.link-reset {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.button {
+    color: white;
+    background-color: #007bff;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.button:hover{
+    background-color: #0169D9;
+    transition: .2s;
+}
+
+.big-btn {
     font-size: 1.25rem;
+    padding: 10px 15px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
     display: flex;
-    flex-flow: wrap row;
+    flex-flow: row wrap;
     height: 100vh;
     align-content: space-between;
-    justify-content: center;
 }
 
-.wrapper * {
-    padding: 1rem;
+.container {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
 }
 
-.header{
-    order: 1;
-    background: linear-gradient(to top right, #33ccff 0%, #ccffcc 100%);
+.header,
+.footer {
+    background: rgb(70, 70, 70);
+    color: white;
+}
+
+.header {
     flex-basis: 100%;
-    height: 50px;
 }
 
-.main {
-    order: 3;
-    background: linear-gradient(to top right, #3399ff 0%, #ccffff 100%);
-    flex: 5 1 1px;
+.header .container {
+    align-items: center;
+    justify-content: space-between;
 }
 
-.aside-1 {
-    order: 2;
-    background: linear-gradient(to top right, #0099ff 0%, #66ffff 100%);
+.header .logo {
+    font-size: 1.5rem;
 }
 
-.aside-2 {
-    order: 4;
-    background: linear-gradient(to top right, #0066cc 0%, #00ffcc 100%);
+.header nav ul {
+    display: flex;
 }
 
-.aside {
-    flex-grow: 1;
+.header nav a {
+    padding: .5rem;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.header nav a:hover {
+    color: rgb(255, 255, 255, 1);
+}
+
+.hero {
+    margin: 25px auto;
+}
+
+.hero .container {
+    flex-flow: row wrap;
+    align-items: space-between;
+    background: #E9ECEF;
+    padding: 65px 30px;
+    border-radius: 5px;
+}
+
+.hero .container * {
+    margin: 0 0 20px 0;
+}
+
+.hero .container *:last-child {
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: normal;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.card-container {
+    margin-bottom: 1.25rem;
+    margin-right: 2rem;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.features .card-container:last-child {
+    margin-right: 0;
+}
+
+.features .card-container .card {
+    position: relative;
+    height: 100%;
+    flex: 0 0 25%;
+    display: flex;
+    flex-flow: nowrap column;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px 5px 0 0;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px 4px 0 0;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-body .card-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card-body .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, .03);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    padding: 10px 20px;
+    border-radius: 0 0 3px 3px;
+}
+
+.card-footer .button {
+    padding: .75rem 1rem;
+    line-height: 1;
 }
 
 .footer {
-    height: 50px;
-    order: 5;
+    padding: 50px 0;
     flex-basis: 100%;
-    background: linear-gradient(to top right, #ff6699 0%, #99ff99 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main p{
-    margin: 0;
-    padding: 0
+.business-promo {
+    display: flex;
+    margin: 0.75rem auto;
+}
+
+.business-promo .image-placeholder {
+    flex: 0 0 65%;
+    margin-right: 2rem;
+}
+
+.business-promo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.promo-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 33%;
+    max-width: 33%;
+    justify-content: flex-start;
+}
+
+.promo-body>* {
+    margin: 0 0 1rem 0;
+}
+
+.promo-body>*:last-child {
+    margin-bottom: 0;
+}
+
+.promo-body .promo-title {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.promo-body .promo-text {
+    line-height: 1.5;
+    font-size: 1rem;
+    flex: 0 0 auto;
+}
+
+.promo-body .button {
+    align-self: flex-start;
+}
+
+.business-cards>.container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
+.card-callout {
+    width: 100%;
+    background: #6C757D;
+    padding: 1.25rem;
+    color: white;
+    text-align: center;
+    border-radius: .25rem;
+}
+
+.business-cards .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 5px 5px 0 0;
+    margin: 1.25rem auto;
+    width: 100%;
+}
+
+.business-cards .card {
+    flex: 1 0 calc(100%/3 - 15px);
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, .125);
+    margin-right: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.business-cards .card:last-child {
+    margin-right: 0;
+}
+
+.business-cards .card-body{
+    padding: 1.25rem;
+}
+
+.business-cards .card-title{
+    font-size: 2rem;
+    margin:  0 0 1.25rem 0;
+}
+
+.business-cards .card-text{
+    line-height: 1.5;
+}
+
+.business-cards .card-footer{
+    width: 100%;
 }
