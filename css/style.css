@@ -254,6 +254,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
+    border-radius: .25rem;
 }
 
 .business-cards .card:last-child {
